@@ -1,0 +1,7 @@
+C:\Users\vbelle\Source\Repos\naveend915\ResumeRevealer\ResumeParser.DataAccess\bin\Debug\ResumeParser.DataAccess.dll
+C:\Users\vbelle\Source\Repos\naveend915\ResumeRevealer\ResumeParser.DataAccess\bin\Debug\ResumeParser.DataAccess.pdb
+C:\Users\vbelle\Source\Repos\naveend915\ResumeRevealer\ResumeParser.DataAccess\bin\Debug\ResumeParser.Model.dll
+C:\Users\vbelle\Source\Repos\naveend915\ResumeRevealer\ResumeParser.DataAccess\bin\Debug\ResumeParser.Model.pdb
+C:\Users\vbelle\Source\Repos\naveend915\ResumeRevealer\ResumeParser.DataAccess\obj\Debug\ResumeParser.DataAccess.csprojResolveAssemblyReference.cache
+C:\Users\vbelle\Source\Repos\naveend915\ResumeRevealer\ResumeParser.DataAccess\obj\Debug\ResumeParser.DataAccess.dll
+C:\Users\vbelle\Source\Repos\naveend915\ResumeRevealer\ResumeParser.DataAccess\obj\Debug\ResumeParser.DataAccess.pdb
