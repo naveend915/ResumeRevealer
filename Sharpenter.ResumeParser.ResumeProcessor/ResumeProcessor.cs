@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using ResumeParser.DataAccess;
 using System.Data;
 using System.Linq;
+using System.Data.SqlClient;
 
 namespace ResumeParser.ResumeProcessor
 {
@@ -66,15 +67,12 @@ namespace ResumeParser.ResumeProcessor
             var resume = resumeBuilder.Build(sections);
             
             resume.Skills = resume.Skills.Distinct().ToList();
-
+            resumeParserData.InsertCandidate(resume);
             var formatted = _outputFormatter.Format(resume);
 
             return formatted;
         }
-        public int InsertCandidate(Resume resume)
-        {
-            return 0;
-        }
+      
         public List<Candidate> GetCandidates()
         {
             List<Candidate> candidates = new List<Candidate>();
