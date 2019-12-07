@@ -52,18 +52,21 @@ namespace ResumeParser.DataAccess
             }
         }
 
-        public int InsertCandidate(Resume resume)
+        public int InsertCandidate(Resume resume,string path)
         {
             try
             {
-                SqlParameter[] sqlParameters = new SqlParameter[4];
+                SqlParameter[] sqlParameters = new SqlParameter[9];
                 sqlParameters[0] = new SqlParameter("@Name", resume.Firstname);
                 sqlParameters[1] = new SqlParameter("@Gender", resume.Gender);
-                sqlParameters[2] = new SqlParameter("@EmailId", resume.Emailaddress);
-                sqlParameters[3] = new SqlParameter("@YearsOfExperience", resume.yoe);
+                sqlParameters[2] = new SqlParameter("@EmailId", resume.EmailAddress);
+                sqlParameters[3] = new SqlParameter("@YearsOfExperience", string.IsNullOrWhiteSpace(resume.YearsOfExperience) ? "" : resume.YearsOfExperience);
                 sqlParameters[4] = new SqlParameter("@Designation", resume.Designation);
-                sqlParameters[5] = new SqlParameter("@Skills", string.Join(",", resume.Skills));
-                sqlParameters[6] = new SqlParameter("@Certifications", string.Join(",", resume.Certifications));
+                sqlParameters[5] = new SqlParameter("@Skills", resume.Skills == null ? "" :  string.Join(",", resume.Skills));
+                sqlParameters[6] = new SqlParameter("@Certifications", resume.Certifications == null ? "" : string.Join(",", resume.Certifications));
+                sqlParameters[7] = new SqlParameter("@Path", string.IsNullOrWhiteSpace(path) ? "" : path);
+                sqlParameters[8] = new SqlParameter("@UserId", 1);
+
                 return conn.executeUpdateQuery("usp_InsertCandidate", sqlParameters);
             }
             catch (Exception e)

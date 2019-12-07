@@ -28,7 +28,7 @@ namespace ResumeParser.ResumeProcessor
             {
                 throw new ArgumentNullException("outputFormatter");
             }
-
+            resumeParserData = new ResumeParserData();
             _outputFormatter = outputFormatter;
             //IInputReaderFactory inputReaderFactory = new InputReaderFactory(new ConfigFileApplicationSettingsAdapter());
             //_inputReaders = inputReaderFactory.LoadInputReaders();
@@ -57,7 +57,7 @@ namespace ResumeParser.ResumeProcessor
             }
         }
 
-        public string Process(IList<string> rawInput)
+        public string Process(IList<string> rawInput,string path)
         {
             var sectionExtractor = new SectionExtractor();
             var sections = sectionExtractor.ExtractFrom(rawInput);
@@ -67,7 +67,7 @@ namespace ResumeParser.ResumeProcessor
             var resume = resumeBuilder.Build(sections);
             
             resume.Skills = resume.Skills.Distinct().ToList();
-            resumeParserData.InsertCandidate(resume);
+            resumeParserData.InsertCandidate(resume,path);
             var formatted = _outputFormatter.Format(resume);
 
             return formatted;

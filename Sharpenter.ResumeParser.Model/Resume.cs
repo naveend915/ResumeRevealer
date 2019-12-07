@@ -13,6 +13,7 @@ namespace ResumeParser.Model
         public string Phonenumbers { get; set; }
         public string Languages { get; set; }
         public string Summarydescription { get; set; }
+        public string Path { get; set; }
         public List<string> Certifications { get; set; }
         public List<string> Skills { get; set; }
         public string Location { get; set; }

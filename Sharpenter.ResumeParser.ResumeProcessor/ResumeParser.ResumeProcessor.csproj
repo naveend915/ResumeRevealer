@@ -74,13 +74,13 @@
     <EmbeddedResource Include="Data\Countries.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ResumeParser.DataAccess\ResumeParser.DataAccess.csproj">
-      <Project>{2094DA5F-19D6-4000-BA9C-5A908C7D133D}</Project>
-      <Name>ResumeParser.DataAccess</Name>
-    </ProjectReference>
     <Content Include="Data\Technology.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ResumeParser.DataAccess\ResumeParser.DataAccess.csproj">
+      <Project>{2094da5f-19d6-4000-ba9c-5a908c7d133d}</Project>
+      <Name>ResumeParser.DataAccess</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Sharpenter.ResumeParser.Model\ResumeParser.Model.csproj">
       <Project>{48d5db4a-3c27-4b5e-8b42-4cda14aa8386}</Project>
       <Name>ResumeParser.Model</Name>

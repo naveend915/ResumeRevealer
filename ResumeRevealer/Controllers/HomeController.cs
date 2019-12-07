@@ -37,7 +37,7 @@ namespace ResumeRevealer.Controllers
                     }
                 }
                 else { list = pdfInput.Handle(file); }
-                var output = processor.Process(list);
+                var output = processor.Process(list,file);
                 resumeList.Add(JObject.Parse(output));
             }
             return this.Ok(resumeList);

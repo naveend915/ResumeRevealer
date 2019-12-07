@@ -18,7 +18,7 @@ namespace ResumeParser.ResumeProcessor.Parsers
         public SummaryParser(IResourceLoader resourceLoader)
         {
             var assembly = Assembly.GetExecutingAssembly();
-            using (StreamReader sr = new StreamReader("C:\\data\\Technology.txt"))
+            using (StreamReader sr = new StreamReader("C:\\Tekathon 2019\\Data\\Technology.txt"))
             {
                 // Read the stream to a string, and write the string to the console.
                 String line = sr.ReadToEnd();
