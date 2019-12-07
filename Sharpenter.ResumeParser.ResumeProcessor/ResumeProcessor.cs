@@ -79,12 +79,12 @@ namespace ResumeParser.ResumeProcessor
             }
         }
       
-        public List<Candidate> GetCandidates()
+        public List<Candidate> GetCandidates(int userId)
         {
             List<Candidate> candidates = new List<Candidate>();
             try
             {
-                var dataTable = resumeParserData.GetCandidates();
+                var dataTable = resumeParserData.GetCandidates(userId);
                 foreach (DataRow dr in dataTable.Rows)
                 {
                     Candidate candidate = new Candidate();
@@ -106,6 +106,7 @@ namespace ResumeParser.ResumeProcessor
                     candidate.L2Comments = dr.IsNull("L2Comments") ? "" : dr["L2Comments"].ToString();
                     candidate.L1UserId = dr.IsNull("L1UserId") ? 0 : int.Parse(dr["L1UserId"].ToString());
                     candidate.L2UserId = dr.IsNull("L2UserId") ? 0 : int.Parse(dr["L2UserId"].ToString());
+                    candidate.Isfavorite = dr.IsNull("IsFavourite") ? false : Convert.ToBoolean(dr["IsFavourite"].ToString());
                     candidates.Add(candidate);
                 }
                 return candidates;

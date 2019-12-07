@@ -23,6 +23,7 @@ namespace ResumeParser.Model
         public DateTime CreatedDate { get; set; }
         public DateTime	LastUpdatedDate { get; set; }
         public int LastUpdatedBy { get; set; }
+        public bool Isfavorite { get; set; }
 
     }
 }

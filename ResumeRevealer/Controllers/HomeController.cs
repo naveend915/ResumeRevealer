@@ -26,7 +26,7 @@ namespace ResumeRevealer.Controllers
             var pdfInput = new PdfInputReader();
             var processor = new ResumeProcessor(new JsonOutputFormatter());
             var files = Directory.GetFiles(@"C:\Tekathon 2019\Resumes").Select(Path.GetFullPath);
-            var candidates = resumeProcessor.GetCandidates();
+            var candidates = resumeProcessor.GetCandidates(0);
             var resumeList = new List<JObject>();
             string output = "";
             var maxyeo = 0.0;
@@ -116,9 +116,9 @@ namespace ResumeRevealer.Controllers
 
         [HttpGet]
         [Route("GetAllCandidates")]
-        public IHttpActionResult GetAllCandidates()
+        public IHttpActionResult GetAllCandidates(string userId)
         {
-            return Ok(resumeProcessor.GetCandidates());
+            return Ok(resumeProcessor.GetCandidates(Convert.ToInt32(userId)));
         }
 
         [HttpPost]
@@ -126,13 +126,6 @@ namespace ResumeRevealer.Controllers
         public IHttpActionResult ScheduleCandidate(Candidate candidate)
         {
             var result = resumeProcessor.ScheduleCandidate(candidate);
-            return this.Ok(result);
-        }
-        [HttpGet]
-        [Route("GetCandidates")]
-        public IHttpActionResult GetCandidates()
-        {
-            var result = resumeProcessor.GetCandidates();
             return this.Ok(result);
         }
     }

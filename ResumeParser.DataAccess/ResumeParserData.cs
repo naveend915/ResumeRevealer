@@ -14,11 +14,13 @@ namespace ResumeParser.DataAccess
             conn = new DBConnection();
         }
 
-        public DataTable GetCandidates()
+        public DataTable GetCandidates(int userId)
         {
             try
             {
-                return conn.executeSelectQuery("usp_GetCandidates");
+                SqlParameter[] sqlParameters = new SqlParameter[1];
+                sqlParameters[0] = new SqlParameter("@UserId", userId);
+                return conn.executeSelectQuery("usp_GetCandidates", sqlParameters);
             }
             catch (Exception e)
             {
