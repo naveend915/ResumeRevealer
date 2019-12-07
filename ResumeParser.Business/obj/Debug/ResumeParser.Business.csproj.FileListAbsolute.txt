@@ -1,0 +1,9 @@
+D:\Tekathon 2019\ResumeRevealer\naveend915\ResumeRevealer\ResumeParser.Business\bin\Debug\ResumeParser.Business.dll
+D:\Tekathon 2019\ResumeRevealer\naveend915\ResumeRevealer\ResumeParser.Business\bin\Debug\ResumeParser.Business.pdb
+D:\Tekathon 2019\ResumeRevealer\naveend915\ResumeRevealer\ResumeParser.Business\bin\Debug\ResumeParser.DataAccess.dll
+D:\Tekathon 2019\ResumeRevealer\naveend915\ResumeRevealer\ResumeParser.Business\bin\Debug\ResumeParser.Model.dll
+D:\Tekathon 2019\ResumeRevealer\naveend915\ResumeRevealer\ResumeParser.Business\bin\Debug\ResumeParser.DataAccess.pdb
+D:\Tekathon 2019\ResumeRevealer\naveend915\ResumeRevealer\ResumeParser.Business\bin\Debug\ResumeParser.Model.pdb
+D:\Tekathon 2019\ResumeRevealer\naveend915\ResumeRevealer\ResumeParser.Business\obj\Debug\ResumeParser.Business.csprojResolveAssemblyReference.cache
+D:\Tekathon 2019\ResumeRevealer\naveend915\ResumeRevealer\ResumeParser.Business\obj\Debug\ResumeParser.Business.dll
+D:\Tekathon 2019\ResumeRevealer\naveend915\ResumeRevealer\ResumeParser.Business\obj\Debug\ResumeParser.Business.pdb
