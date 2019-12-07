@@ -76,10 +76,10 @@ namespace ResumeParser.ResumeProcessor.Parsers
         private string FindJobTitle(string line)
         {
             var elements = SplitByWhiteSpaceRegex.Split(line);
-            if (elements.Length > 4)
-            {
-                return string.Empty;
-            }
+            //if (elements.Length > 4)
+            //{
+            //    return string.Empty;
+            //}
 
             return _jobLookUp.FirstOrDefault(job => line.IndexOf(job, StringComparison.InvariantCultureIgnoreCase) > -1);
         }
