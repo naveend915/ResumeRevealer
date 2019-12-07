@@ -57,20 +57,26 @@ namespace ResumeParser.ResumeProcessor
             }
         }
 
-        public string Process(IList<string> rawInput,string path)
+        public string Process(IList<string> rawInput,string path,Resume resumeObj)
         {
-            var sectionExtractor = new SectionExtractor();
-            var sections = sectionExtractor.ExtractFrom(rawInput);
+            if (resumeObj == null)
+            {
+                var sectionExtractor = new SectionExtractor();
+                var sections = sectionExtractor.ExtractFrom(rawInput);
 
-            IResourceLoader resourceLoader = new CachedResourceLoader(new ResourceLoader());
-            var resumeBuilder = new ResumeBuilder(resourceLoader);
-            var resume = resumeBuilder.Build(sections);
-            
-            resume.Skills = resume.Skills.Distinct().ToList();
-            resumeParserData.InsertCandidate(resume,path);
-            var formatted = _outputFormatter.Format(resume);
+                IResourceLoader resourceLoader = new CachedResourceLoader(new ResourceLoader());
+                var resumeBuilder = new ResumeBuilder(resourceLoader);
+                var resume = resumeBuilder.Build(sections);
 
-            return formatted;
+                resume.Skills = resume.Skills.Distinct().ToList();
+                resumeParserData.InsertCandidate(resume, path);
+                var formatted = _outputFormatter.Format(resume);
+                return formatted;
+            }
+            else
+            {
+                return _outputFormatter.Format(resumeObj);
+            }
         }
       
         public List<Candidate> GetCandidates()
@@ -86,8 +92,9 @@ namespace ResumeParser.ResumeProcessor
                     candidate.Name = dr.IsNull("Name") ? "" : dr["Name"].ToString();
                     candidate.EmailId = dr.IsNull("EmailId") ? "" : dr["EmailId"].ToString();
                     candidate.Gender = dr.IsNull("Gender") ? "" : dr["Gender"].ToString();
+                    candidate.Path = dr.IsNull("Path") ? "" : dr["Path"].ToString();
                     candidate.Designation = dr.IsNull("Designation") ? "" : dr["Designation"].ToString();
-                    candidate.YearsOfExperience = dr.IsNull("YearsOfExperience") ? 0 : int.Parse(dr["YearsOfExperience"].ToString());
+                    candidate.YearsOfExperience = dr.IsNull("YearsOfExperience") ? "" : dr["YearsOfExperience"].ToString();
                     candidate.Status = dr.IsNull("Status") ? "" : dr["Status"].ToString();
                     candidate.Skills = dr.IsNull("Skills") ? "" : dr["Skills"].ToString();
                     candidate.ScheduleDateTime = dr.IsNull("ScheduleDateTime") ? new DateTime() : Convert.ToDateTime(dr["ScheduleDateTime"]);

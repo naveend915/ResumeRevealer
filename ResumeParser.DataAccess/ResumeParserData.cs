@@ -59,8 +59,8 @@ namespace ResumeParser.DataAccess
                 SqlParameter[] sqlParameters = new SqlParameter[9];
                 sqlParameters[0] = new SqlParameter("@Name", resume.Firstname);
                 sqlParameters[1] = new SqlParameter("@Gender", resume.Gender);
-                sqlParameters[2] = new SqlParameter("@EmailId", resume.EmailAddress);
-                sqlParameters[3] = new SqlParameter("@YearsOfExperience", string.IsNullOrWhiteSpace(resume.YearsOfExperience) ? "" : resume.YearsOfExperience);
+                sqlParameters[2] = new SqlParameter("@EmailId", resume.Emailaddress);
+                sqlParameters[3] = new SqlParameter("@YearsOfExperience", string.IsNullOrWhiteSpace(resume.yoe) ? "" : resume.yoe);
                 sqlParameters[4] = new SqlParameter("@Designation", resume.Designation);
                 sqlParameters[5] = new SqlParameter("@Skills", resume.Skills == null ? "" :  string.Join(",", resume.Skills));
                 sqlParameters[6] = new SqlParameter("@Certifications", resume.Certifications == null ? "" : string.Join(",", resume.Certifications));

@@ -9,7 +9,7 @@ namespace ResumeParser.Model
 	    public string EmailId { get; set; }
         public string Gender { get; set; }
         public string Designation { get; set; }
-        public int YearsOfExperience { get; set; }
+        public string YearsOfExperience { get; set; }
         public string Skills { get; set; }
         public string Certifications { get; set; }
         public string Path { get; set; }
