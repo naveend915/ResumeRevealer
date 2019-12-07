@@ -44,8 +44,14 @@ namespace ResumeParser.DataAccess
         {
             try
             {
-                SqlParameter[] sqlParameters = new SqlParameter[1];
-                sqlParameters[0] = new SqlParameter("@name", resume.FirstName);
+                SqlParameter[] sqlParameters = new SqlParameter[4];
+                sqlParameters[0] = new SqlParameter("@Name", resume.FirstName);
+                sqlParameters[1] = new SqlParameter("@Gender", resume.Gender);
+                sqlParameters[2] = new SqlParameter("@EmailId", resume.EmailAddress);
+                sqlParameters[3] = new SqlParameter("@YearsOfExperience", resume.YearsOfExperience);
+                sqlParameters[4] = new SqlParameter("@Designation", resume.Designation);
+                sqlParameters[5] = new SqlParameter("@Skills", string.Join(",", resume.Skills));
+                sqlParameters[6] = new SqlParameter("@Certifications", string.Join(",", resume.Certifications));
                 return conn.executeUpdateQuery("usp_InsertCandidate", sqlParameters);
             }
             catch (Exception e)
