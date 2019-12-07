@@ -69,7 +69,7 @@ namespace ResumeParser.ResumeProcessor
                 var resume = resumeBuilder.Build(sections);
 
                 resume.Skills = resume.Skills.Distinct().ToList();
-               // resumeParserData.InsertCandidate(resume, path);
+                resumeParserData.InsertCandidate(resume, path);
                 var formatted = _outputFormatter.Format(resume);
                 return formatted;
             }
