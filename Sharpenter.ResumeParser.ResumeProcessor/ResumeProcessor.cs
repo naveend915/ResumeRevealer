@@ -115,5 +115,10 @@ namespace ResumeParser.ResumeProcessor
                 throw e;
             }
         }
+        public int ScheduleCandidate(Candidate candidate)
+        {
+            return resumeParserData.ScheduleCandidate(candidate);
+        }
     }
+   
 }

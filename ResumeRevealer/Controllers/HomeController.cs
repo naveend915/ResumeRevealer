@@ -113,5 +113,20 @@ namespace ResumeRevealer.Controllers
             }
             return this.Ok(resumeList);
         }
+
+        [HttpPost]
+        [Route("ScheduleCandidate")]
+        public IHttpActionResult ScheduleCandidate(Candidate candidate)
+        {
+            var result = resumeProcessor.ScheduleCandidate(candidate);
+            return this.Ok(result);
+        }
+        [HttpGet]
+        [Route("GetCandidates")]
+        public IHttpActionResult GetCandidates()
+        {
+            var result = resumeProcessor.GetCandidates();
+            return this.Ok(result);
+        }
     }
 }
