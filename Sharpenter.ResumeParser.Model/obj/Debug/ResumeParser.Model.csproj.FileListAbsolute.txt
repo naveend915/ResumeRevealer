@@ -6,3 +6,4 @@ C:\Users\vbelle\Source\Repos\naveend915\ResumeRevealer\Sharpenter.ResumeParser.M
 C:\Users\vbelle\Source\Repos\naveend915\ResumeRevealer\Sharpenter.ResumeParser.Model\bin\Debug\ResumeParser.Model.pdb
 C:\Users\vbelle\Source\Repos\naveend915\ResumeRevealer\Sharpenter.ResumeParser.Model\obj\Debug\ResumeParser.Model.dll
 C:\Users\vbelle\Source\Repos\naveend915\ResumeRevealer\Sharpenter.ResumeParser.Model\obj\Debug\ResumeParser.Model.pdb
+C:\Users\vbelle\Source\Repos\naveend915\ResumeRevealer\Sharpenter.ResumeParser.Model\obj\Debug\ResumeParser.Model.csprojResolveAssemblyReference.cache
