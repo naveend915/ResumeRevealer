@@ -43,13 +43,15 @@ namespace ResumeRevealer.Controllers
                     {
                         resume = new Resume()
                         {
-                            Firstname = candidateResume.Name,
+                            Firstname = candidateResume.FirstName,
+                            Lastname = candidateResume.LastName,
                             Gender = candidateResume.Gender,
                             Certifications = candidateResume.Certifications == null ? null : candidateResume.Certifications.Split(',').ToList(),
                             Designation = candidateResume.Designation,
                             Path = candidateResume.Path,
                             Skills = candidateResume.Skills == null ? null : candidateResume.Skills.Split(',').ToList(),
-                            yoe = candidateResume.YearsOfExperience
+                            yoe = candidateResume.YearsOfExperience,
+                            Emailaddress = candidateResume.EmailId                            
                         };
                         output = processor.Process(list, file, resume);
                         resumeList.Add(JObject.Parse(output));
