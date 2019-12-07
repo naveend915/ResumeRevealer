@@ -124,7 +124,6 @@ D:\Tekathon 2019\ResumeRevealer\naveend915\ResumeRevealer\ResumeRevealer\bin\Ant
 D:\Tekathon 2019\ResumeRevealer\naveend915\ResumeRevealer\ResumeRevealer\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 D:\Tekathon 2019\ResumeRevealer\naveend915\ResumeRevealer\ResumeRevealer\bin\Microsoft.Web.Infrastructure.dll
 D:\Tekathon 2019\ResumeRevealer\naveend915\ResumeRevealer\ResumeRevealer\bin\Newtonsoft.Json.dll
-D:\Tekathon 2019\ResumeRevealer\naveend915\ResumeRevealer\ResumeRevealer\bin\ResumeParser.Business.dll
 D:\Tekathon 2019\ResumeRevealer\naveend915\ResumeRevealer\ResumeRevealer\bin\ResumeParser.InputReader.Pdf.dll
 D:\Tekathon 2019\ResumeRevealer\naveend915\ResumeRevealer\ResumeRevealer\bin\ResumeParser.Model.dll
 D:\Tekathon 2019\ResumeRevealer\naveend915\ResumeRevealer\ResumeRevealer\bin\Sharpenter.ResumeParser.OutputFormatter.Json.dll
@@ -142,9 +141,8 @@ D:\Tekathon 2019\ResumeRevealer\naveend915\ResumeRevealer\ResumeRevealer\bin\Sys
 D:\Tekathon 2019\ResumeRevealer\naveend915\ResumeRevealer\ResumeRevealer\bin\System.Web.WebPages.dll
 D:\Tekathon 2019\ResumeRevealer\naveend915\ResumeRevealer\ResumeRevealer\bin\System.Web.WebPages.Razor.dll
 D:\Tekathon 2019\ResumeRevealer\naveend915\ResumeRevealer\ResumeRevealer\bin\WebGrease.dll
-D:\Tekathon 2019\ResumeRevealer\naveend915\ResumeRevealer\ResumeRevealer\bin\ResumeParser.DataAccess.dll
 D:\Tekathon 2019\ResumeRevealer\naveend915\ResumeRevealer\ResumeRevealer\bin\itextsharp.dll
-D:\Tekathon 2019\ResumeRevealer\naveend915\ResumeRevealer\ResumeRevealer\bin\ResumeParser.Business.pdb
+D:\Tekathon 2019\ResumeRevealer\naveend915\ResumeRevealer\ResumeRevealer\bin\ResumeParser.DataAccess.dll
 D:\Tekathon 2019\ResumeRevealer\naveend915\ResumeRevealer\ResumeRevealer\bin\ResumeParser.InputReader.Pdf.pdb
 D:\Tekathon 2019\ResumeRevealer\naveend915\ResumeRevealer\ResumeRevealer\bin\ResumeParser.Model.pdb
 D:\Tekathon 2019\ResumeRevealer\naveend915\ResumeRevealer\ResumeRevealer\bin\Sharpenter.ResumeParser.OutputFormatter.Json.pdb
@@ -163,7 +161,7 @@ D:\Tekathon 2019\ResumeRevealer\naveend915\ResumeRevealer\ResumeRevealer\bin\Sys
 D:\Tekathon 2019\ResumeRevealer\naveend915\ResumeRevealer\ResumeRevealer\bin\System.Web.WebPages.Deployment.xml
 D:\Tekathon 2019\ResumeRevealer\naveend915\ResumeRevealer\ResumeRevealer\bin\System.Web.WebPages.Razor.xml
 D:\Tekathon 2019\ResumeRevealer\naveend915\ResumeRevealer\ResumeRevealer\bin\Antlr3.Runtime.pdb
-D:\Tekathon 2019\ResumeRevealer\naveend915\ResumeRevealer\ResumeRevealer\bin\ResumeParser.DataAccess.pdb
 D:\Tekathon 2019\ResumeRevealer\naveend915\ResumeRevealer\ResumeRevealer\bin\itextsharp.xml
+D:\Tekathon 2019\ResumeRevealer\naveend915\ResumeRevealer\ResumeRevealer\bin\ResumeParser.DataAccess.pdb
 D:\Tekathon 2019\ResumeRevealer\naveend915\ResumeRevealer\ResumeRevealer\obj\Debug\ResumeRevealer.dll
 D:\Tekathon 2019\ResumeRevealer\naveend915\ResumeRevealer\ResumeRevealer\obj\Debug\ResumeRevealer.pdb

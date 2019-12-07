@@ -51,7 +51,6 @@ namespace ResumeParser.DataAccess
             }
         }
     
-        public int UpdateCandidate(Resume resume)
         public int ScheduleCandidate(Candidate candidate)
         {
             try
