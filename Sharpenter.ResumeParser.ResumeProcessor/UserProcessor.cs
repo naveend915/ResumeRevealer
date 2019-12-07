@@ -45,17 +45,18 @@ namespace ResumeParser.ResumeProcessor
             }
         }
 
-        public List<IdTextDTO> GetInterviewers()
+        public List<User> GetInterviewers()
         {
-            var listOfInteviewers = new List<IdTextDTO>();
+            var listOfInteviewers = new List<User>();
             try
             {
                 var dataTable = userData.GetInterviewers();
                 foreach (DataRow dr in dataTable.Rows)
                 {
-                    var interviewer = new IdTextDTO();
+                    var interviewer = new User();
                     interviewer.Id = dr.IsNull("Id") ? 0 : int.Parse(dr["Id"].ToString());
                     interviewer.Text = dr.IsNull("Name") ? "" : dr["Name"].ToString();
+                    interviewer.EmailId = dr.IsNull("EmailId") ? "" : dr["EmailId"].ToString();
                     listOfInteviewers.Add(interviewer);
                 }
                 return listOfInteviewers;
