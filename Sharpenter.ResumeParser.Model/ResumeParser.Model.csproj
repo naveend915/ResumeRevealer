@@ -43,6 +43,7 @@
     <Compile Include="Exceptions\NotSupportedResumeTypeException.cs" />
     <Compile Include="Exceptions\ResumeParserException.cs" />
     <Compile Include="IApplicationSettings.cs" />
+    <Compile Include="IdTextDTO.cs" />
     <Compile Include="IInputReader.cs" />
     <Compile Include="IInputReaderFactory.cs" />
     <Compile Include="InputReaderBase.cs" />

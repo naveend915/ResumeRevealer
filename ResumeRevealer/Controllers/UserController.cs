@@ -28,5 +28,21 @@ namespace ResumeRevealer.Controllers
             return Ok(userObj);
         }
 
+        [HttpGet]
+        [Route("GetInterviewers")]
+        public IHttpActionResult GetInterviewers()
+        {
+            var result = resumeParserBusiness.GetInterviewers();
+            return Ok(result);
+        }
+
+        
+        [HttpPost]
+        [Route("SaveUserSaveUserCriteria")]
+        public IHttpActionResult SaveUserSaveUserCriteria(User user)
+        {
+            var result = resumeParserBusiness.SaveUserSaveUserCriteria(user);
+            return Ok(result);
+        }
     }
 }

@@ -26,6 +26,18 @@ namespace ResumeParser.DataAccess
             }
         }
 
+        public DataTable GetInterviewers()
+        {
+            try
+            {
+                return conn.executeSelectQuery("usp_GetInterviewers");
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+
         public int UpdateCandidate(Resume resume)
         {
             try
@@ -72,6 +84,24 @@ namespace ResumeParser.DataAccess
                 throw e;
             }
         }
+
+        public bool SaveUserSaveUserCriteria(User user)
+        {
+            try
+            {
+                SqlParameter[] sqlParameters = new SqlParameter[3];
+                sqlParameters[0] = new SqlParameter("@FilterCriteria", string.IsNullOrWhiteSpace(user.FilterCriteria) ? "" : user.FilterCriteria);
+                sqlParameters[1] = new SqlParameter("@DefaultScreen", string.IsNullOrWhiteSpace(user.DefaultScreen) ? "" : user.DefaultScreen);
+                sqlParameters[3] = new SqlParameter("@UserId", user.Id);
+                conn.executeInsertQuery("usp_SaveUserCriteria", sqlParameters);
+                return true;
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+
         public DataTable GetUser(string userName,string password)
         {           
             try
