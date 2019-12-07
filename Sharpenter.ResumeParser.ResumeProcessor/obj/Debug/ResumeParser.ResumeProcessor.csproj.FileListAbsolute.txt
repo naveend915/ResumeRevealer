@@ -1,8 +1,3 @@
-D:\Tekathon 2019\ResumeRevealer\naveend915\ResumeRevealer\Sharpenter.ResumeParser.ResumeProcessor\bin\Debug\Sharpenter.ResumeParser.ResumeProcessor.dll
-D:\Tekathon 2019\ResumeRevealer\naveend915\ResumeRevealer\Sharpenter.ResumeParser.ResumeProcessor\bin\Debug\Sharpenter.ResumeParser.ResumeProcessor.pdb
-D:\Tekathon 2019\ResumeRevealer\naveend915\ResumeRevealer\Sharpenter.ResumeParser.ResumeProcessor\obj\Debug\ResumeParser.ResumeProcessor.csprojResolveAssemblyReference.cache
-D:\Tekathon 2019\ResumeRevealer\naveend915\ResumeRevealer\Sharpenter.ResumeParser.ResumeProcessor\obj\Debug\Sharpenter.ResumeParser.ResumeProcessor.dll
-D:\Tekathon 2019\ResumeRevealer\naveend915\ResumeRevealer\Sharpenter.ResumeParser.ResumeProcessor\obj\Debug\Sharpenter.ResumeParser.ResumeProcessor.pdb
 C:\Users\vbelle\Source\Repos\naveend915\ResumeRevealer\Sharpenter.ResumeParser.ResumeProcessor\bin\Debug\Sharpenter.ResumeParser.ResumeProcessor.dll
 C:\Users\vbelle\Source\Repos\naveend915\ResumeRevealer\Sharpenter.ResumeParser.ResumeProcessor\bin\Debug\Sharpenter.ResumeParser.ResumeProcessor.pdb
 C:\Users\vbelle\Source\Repos\naveend915\ResumeRevealer\Sharpenter.ResumeParser.ResumeProcessor\bin\Debug\ResumeParser.Model.dll
@@ -10,3 +5,10 @@ C:\Users\vbelle\Source\Repos\naveend915\ResumeRevealer\Sharpenter.ResumeParser.R
 C:\Users\vbelle\Source\Repos\naveend915\ResumeRevealer\Sharpenter.ResumeParser.ResumeProcessor\obj\Debug\ResumeParser.ResumeProcessor.csprojResolveAssemblyReference.cache
 C:\Users\vbelle\Source\Repos\naveend915\ResumeRevealer\Sharpenter.ResumeParser.ResumeProcessor\obj\Debug\Sharpenter.ResumeParser.ResumeProcessor.dll
 C:\Users\vbelle\Source\Repos\naveend915\ResumeRevealer\Sharpenter.ResumeParser.ResumeProcessor\obj\Debug\Sharpenter.ResumeParser.ResumeProcessor.pdb
+D:\Tekathon 2019\ResumeRevealer\naveend915\ResumeRevealer\Sharpenter.ResumeParser.ResumeProcessor\obj\Debug\ResumeParser.ResumeProcessor.csprojResolveAssemblyReference.cache
+D:\Tekathon 2019\ResumeRevealer\naveend915\ResumeRevealer\Sharpenter.ResumeParser.ResumeProcessor\bin\Debug\Sharpenter.ResumeParser.ResumeProcessor.dll
+D:\Tekathon 2019\ResumeRevealer\naveend915\ResumeRevealer\Sharpenter.ResumeParser.ResumeProcessor\bin\Debug\Sharpenter.ResumeParser.ResumeProcessor.pdb
+D:\Tekathon 2019\ResumeRevealer\naveend915\ResumeRevealer\Sharpenter.ResumeParser.ResumeProcessor\bin\Debug\ResumeParser.Model.dll
+D:\Tekathon 2019\ResumeRevealer\naveend915\ResumeRevealer\Sharpenter.ResumeParser.ResumeProcessor\bin\Debug\ResumeParser.Model.pdb
+D:\Tekathon 2019\ResumeRevealer\naveend915\ResumeRevealer\Sharpenter.ResumeParser.ResumeProcessor\obj\Debug\Sharpenter.ResumeParser.ResumeProcessor.dll
+D:\Tekathon 2019\ResumeRevealer\naveend915\ResumeRevealer\Sharpenter.ResumeParser.ResumeProcessor\obj\Debug\Sharpenter.ResumeParser.ResumeProcessor.pdb

@@ -73,13 +73,13 @@
     <EmbeddedResource Include="Data\Countries.txt" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Data\Technology.txt" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\Sharpenter.ResumeParser.Model\ResumeParser.Model.csproj">
       <Project>{48d5db4a-3c27-4b5e-8b42-4cda14aa8386}</Project>
       <Name>ResumeParser.Model</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Data\Technology.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
