@@ -94,9 +94,13 @@ D:\Tekathon 2019\ResumeRevealer\naveend915\ResumeRevealer\ResumeRevealer\bin\ite
 D:\Tekathon 2019\ResumeRevealer\naveend915\ResumeRevealer\ResumeRevealer\obj\Debug\ResumeRevealer.csprojResolveAssemblyReference.cache
 D:\Tekathon 2019\ResumeRevealer\naveend915\ResumeRevealer\ResumeRevealer\obj\Debug\ResumeRevealer.dll
 D:\Tekathon 2019\ResumeRevealer\naveend915\ResumeRevealer\ResumeRevealer\obj\Debug\ResumeRevealer.pdb
-D:\Tekathon 2019\ResumeRevealer\naveend915\ResumeRevealer\ResumeRevealer\bin\Sharpenter.ResumeParser.Model.dll
 D:\Tekathon 2019\ResumeRevealer\naveend915\ResumeRevealer\ResumeRevealer\bin\Sharpenter.ResumeParser.OutputFormatter.Json.dll
 D:\Tekathon 2019\ResumeRevealer\naveend915\ResumeRevealer\ResumeRevealer\bin\Sharpenter.ResumeParser.ResumeProcessor.dll
-D:\Tekathon 2019\ResumeRevealer\naveend915\ResumeRevealer\ResumeRevealer\bin\Sharpenter.ResumeParser.Model.pdb
 D:\Tekathon 2019\ResumeRevealer\naveend915\ResumeRevealer\ResumeRevealer\bin\Sharpenter.ResumeParser.OutputFormatter.Json.pdb
 D:\Tekathon 2019\ResumeRevealer\naveend915\ResumeRevealer\ResumeRevealer\bin\Sharpenter.ResumeParser.ResumeProcessor.pdb
+D:\Tekathon 2019\ResumeRevealer\naveend915\ResumeRevealer\ResumeRevealer\bin\ResumeParser.Business.dll
+D:\Tekathon 2019\ResumeRevealer\naveend915\ResumeRevealer\ResumeRevealer\bin\ResumeParser.Model.dll
+D:\Tekathon 2019\ResumeRevealer\naveend915\ResumeRevealer\ResumeRevealer\bin\ResumeParser.DataAccess.dll
+D:\Tekathon 2019\ResumeRevealer\naveend915\ResumeRevealer\ResumeRevealer\bin\ResumeParser.Business.pdb
+D:\Tekathon 2019\ResumeRevealer\naveend915\ResumeRevealer\ResumeRevealer\bin\ResumeParser.Model.pdb
+D:\Tekathon 2019\ResumeRevealer\naveend915\ResumeRevealer\ResumeRevealer\bin\ResumeParser.DataAccess.pdb

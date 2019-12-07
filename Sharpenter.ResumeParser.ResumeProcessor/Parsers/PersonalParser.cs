@@ -16,6 +16,7 @@ namespace ResumeParser.ResumeProcessor.Parsers
         private static readonly Regex SocialProfileRegex = new Regex(@"(http(s)?:\/\/)?([\w]+\.)?(linkedin\.com|facebook\.com|github\.com|stackoverflow\.com|bitbucket\.org|sourceforge\.net|(\w+\.)?codeplex\.com|code\.google\.com).*?(?=\s)", RegexOptions.Compiled | RegexOptions.IgnoreCase);
         private static readonly Regex SplitByWhiteSpaceRegex = new Regex(@"\s+|,", RegexOptions.Compiled);
         private readonly HashSet<string> _firstNameLookUp;
+        private readonly HashSet<string> _lastNameLookUp;
         private readonly List<string> _countryLookUp;
 
         public PersonalParser(IResourceLoader resourceLoader)
@@ -23,6 +24,7 @@ namespace ResumeParser.ResumeProcessor.Parsers
             var assembly = Assembly.GetExecutingAssembly();
 
             _firstNameLookUp = resourceLoader.LoadIntoHashSet(assembly, "FirstName.txt", ',');
+            _lastNameLookUp = resourceLoader.LoadIntoHashSet(assembly, "LastName.txt", ',');
             _countryLookUp = new List<string>(resourceLoader.Load(assembly, "Countries.txt", '|'));            
         }
 
@@ -136,7 +138,9 @@ namespace ResumeParser.ResumeProcessor.Parsers
             if (indexOf > -1)
             {
                 var YOE = line.Substring(0, indexOf);
-                var YOEN = Regex.Match(YOE, @"\d+").Value;
+                var YOEN = Regex.Match(YOE, @"\d*(\.\d*)").Value;
+                YOEN = string.IsNullOrWhiteSpace(YOEN) ? Regex.Match(YOE, @"\d+").Value : YOEN;
+                resume.YearsOfExperience = YOEN;
                 YOEFound = true;
             }
 
@@ -156,8 +160,13 @@ namespace ResumeParser.ResumeProcessor.Parsers
                 {
                     resume.FirstName = word;
 
+                    var wordlist = words.Skip(i + 1).ToList();
                     //Consider the rest of the line as part of last name
-                    resume.LastName = string.Join(" ", words.Skip(i + 1));
+                    for(var j = 0; j < wordlist.Count(); j++)
+                    {
+                        var lastName = _lastNameLookUp.Where(name => name == wordlist[j].Trim()).FirstOrDefault();
+                        resume.LastName = string.IsNullOrWhiteSpace(resume.LastName) ? lastName : resume.LastName + lastName;
+                    }
 
                     firstNameFound = true;
                 }

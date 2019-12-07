@@ -32,6 +32,7 @@ namespace ResumeParser.ResumeProcessor.Parsers
             while (i < section.Content.Count)
             {
                 var line = section.Content[i];
+                ExtractYOE(ref resume, line);
                 var title = FindJobTitle(line);
                 if (string.IsNullOrWhiteSpace(title))
                 {
@@ -71,6 +72,18 @@ namespace ResumeParser.ResumeProcessor.Parsers
 
                 i++;
             }            
+        }
+
+        private void ExtractYOE(ref Resume resume, string line)
+        {
+            var indexOf = line.IndexOf("years of", StringComparison.InvariantCultureIgnoreCase);
+            if (indexOf > -1)
+            {
+                var YOE = line.Substring(0, indexOf);
+                var YOEN = Regex.Match(YOE, @"\d*(\.\d*)").Value;
+                YOEN = string.IsNullOrWhiteSpace(YOEN) ? Regex.Match(YOE, @"\d+").Value : YOEN;
+                resume.YearsOfExperience = YOEN;
+            }
         }
 
         private string FindJobTitle(string line)

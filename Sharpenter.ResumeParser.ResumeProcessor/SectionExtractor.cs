@@ -67,6 +67,14 @@ namespace ResumeParser.ResumeProcessor
                     }
                     else
                     {
+                        
+                        if (section.Type == SectionType.WorkExperience)
+                        {
+                            if (!string.IsNullOrWhiteSpace(rawInput[i]))
+                            {
+                                section.Content.Add(rawInput[i]);
+                            }
+                        }
                         while (i < rawInput.Count - 1 &&
                             FindSectionType(rawInput[i + 1].ToLower()) == SectionType.Unknown)
                         {
