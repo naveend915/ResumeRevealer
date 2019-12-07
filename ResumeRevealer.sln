@@ -13,6 +13,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ResumeParser.Model", "Sharp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ResumeParser.OutputFormatter.Json", "Sharpenter.ResumeParser.OutputFormatter.Json\ResumeParser.OutputFormatter.Json.csproj", "{F640B9C6-7D04-4DA0-A620-4C8EC8A1EB57}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ResumeParser.DataAccess", "ResumeParser.DataAccess\ResumeParser.DataAccess.csproj", "{2094DA5F-19D6-4000-BA9C-5A908C7D133D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ResumeParser.Business", "ResumeParser.Business\ResumeParser.Business.csproj", "{42763C54-2060-427E-8D46-6E52950498C2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +43,14 @@ Global
 		{F640B9C6-7D04-4DA0-A620-4C8EC8A1EB57}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F640B9C6-7D04-4DA0-A620-4C8EC8A1EB57}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F640B9C6-7D04-4DA0-A620-4C8EC8A1EB57}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2094DA5F-19D6-4000-BA9C-5A908C7D133D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2094DA5F-19D6-4000-BA9C-5A908C7D133D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2094DA5F-19D6-4000-BA9C-5A908C7D133D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2094DA5F-19D6-4000-BA9C-5A908C7D133D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{42763C54-2060-427E-8D46-6E52950498C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42763C54-2060-427E-8D46-6E52950498C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42763C54-2060-427E-8D46-6E52950498C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42763C54-2060-427E-8D46-6E52950498C2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

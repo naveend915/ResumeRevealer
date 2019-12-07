@@ -1,4 +1,5 @@
 ﻿using ResumeParser.InputReader.Pdf;
+using ResumeParser.Model;
 using ResumeParser.OutputFormatter.Json;
 using ResumeParser.ResumeProcessor;
 using System.IO;

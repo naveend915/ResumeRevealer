@@ -123,12 +123,14 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+    <Folder Include="Views\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -146,6 +148,10 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ResumeParser.Business\ResumeParser.Business.csproj">
+      <Project>{42763C54-2060-427E-8D46-6E52950498C2}</Project>
+      <Name>ResumeParser.Business</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ResumeParser.InputReader.Pdf\ResumeParser.InputReader.Pdf.csproj">
       <Project>{BD909FE4-632F-460E-9843-46AAB3BCA042}</Project>
       <Name>ResumeParser.InputReader.Pdf</Name>
