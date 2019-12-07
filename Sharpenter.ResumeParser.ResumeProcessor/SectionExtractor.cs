@@ -53,17 +53,31 @@ namespace ResumeParser.ResumeProcessor
                         Type = sectionType
                     };
 
-                    while (i < rawInput.Count - 1 &&                         
-                        FindSectionType(rawInput[i + 1].ToLower()) == SectionType.Unknown)
+                    if (section.Type == SectionType.Skills)
                     {
-                        i++;
-
-                        if (!string.IsNullOrWhiteSpace(rawInput[i]))
-                        {
-                            section.Content.Add(rawInput[i]);
-                        }                        
+                        do
+                        {                            
+                            if (!string.IsNullOrWhiteSpace(rawInput[i]))
+                            {
+                                section.Content.Add(rawInput[i]);
+                            }
+                            i++;
+                        } while (i < rawInput.Count - 1 &&
+                       FindSectionType(rawInput[i + 1].ToLower()) == SectionType.Unknown);
                     }
+                    else
+                    {
+                        while (i < rawInput.Count - 1 &&
+                            FindSectionType(rawInput[i + 1].ToLower()) == SectionType.Unknown)
+                        {
+                            i++;
 
+                            if (!string.IsNullOrWhiteSpace(rawInput[i]))
+                            {
+                                section.Content.Add(rawInput[i]);
+                            }
+                        }
+                    }
                     sections.Add(section);
                 } 
 
@@ -76,7 +90,7 @@ namespace ResumeParser.ResumeProcessor
         private SectionType FindSectionType(string input)
         {
             var elements = SplitByWhiteSpaceRegex.Split(input);
-            return elements.Length < SectionTitleNumberOfWordsLimit ? _sectionMatchingService.FindSectionTypeMatching(input) : SectionType.Unknown;
+            return elements.Length > 0 ? _sectionMatchingService.FindSectionTypeMatching(input) : SectionType.Unknown;
         }
     }    
 }
