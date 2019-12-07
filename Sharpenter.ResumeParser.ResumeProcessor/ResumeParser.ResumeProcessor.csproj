@@ -61,6 +61,7 @@
     <Compile Include="ResumeProcessor.cs" />
     <Compile Include="SectionExtractor.cs" />
     <Compile Include="SectionMatchingService.cs" />
+    <Compile Include="UserProcessor.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Data\FirstName.txt" />
@@ -73,6 +74,10 @@
     <EmbeddedResource Include="Data\Countries.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ResumeParser.DataAccess\ResumeParser.DataAccess.csproj">
+      <Project>{2094DA5F-19D6-4000-BA9C-5A908C7D133D}</Project>
+      <Name>ResumeParser.DataAccess</Name>
+    </ProjectReference>
     <Content Include="Data\Technology.txt" />
   </ItemGroup>
   <ItemGroup>
