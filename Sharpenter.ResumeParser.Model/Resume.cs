@@ -8,6 +8,7 @@ namespace ResumeParser.Model
         public string Lastname { get; set; }
         public string Gender { get; set; }
         public string yoe { get; set; }
+        public double rating { get; set; }
         public string Emailaddress { get; set; }
         public string Designation { get; set; }
         public string Phonenumbers { get; set; }

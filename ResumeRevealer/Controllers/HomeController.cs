@@ -4,6 +4,7 @@ using ResumeParser.InputReader.Pdf;
 using ResumeParser.Model;
 using ResumeParser.OutputFormatter.Json;
 using ResumeParser.ResumeProcessor;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -28,6 +29,9 @@ namespace ResumeRevealer.Controllers
             var candidates = resumeProcessor.GetCandidates();
             var resumeList = new List<JObject>();
             string output = "";
+            var maxyeo = 0.0;
+            var maxskillcounts = 0;
+            var maxcertificationcount = 0;
             foreach (var file in files)
             {
                 Resume resume = null;
@@ -49,20 +53,61 @@ namespace ResumeRevealer.Controllers
                         };
                         output = processor.Process(list, file, resume);
                         resumeList.Add(JObject.Parse(output));
+                        if (maxyeo < Convert.ToDouble(candidateResume.YearsOfExperience))
+                            maxyeo = Convert.ToDouble(candidateResume.YearsOfExperience);
+                        if (maxskillcounts < candidateResume.Skills.Count())
+                            maxskillcounts = candidateResume.Skills.Count();
+                        if (maxcertificationcount < candidateResume.Certifications.Count())
+                            maxcertificationcount = candidateResume.Certifications.Count();
+                      
                     }
                     else
                     {
                         list = pdfInput.Handle(file);
                         output = processor.Process(list, file, resume);
+                        var candidateData = JObject.Parse(output);
                         resumeList.Add(JObject.Parse(output));
+                        if (!string.IsNullOrEmpty(candidateData["yoe"].ToString()) && maxyeo < Convert.ToDouble(candidateData["yoe"].ToString()))
+                            maxyeo = Convert.ToDouble(candidateData["yoe"].ToString());
+                        if (candidateData["skills"] != null && maxskillcounts < candidateData["skills"].Count())
+                            maxskillcounts = candidateData["skills"].Count();
+                        if (candidateData["certifications"]!=null && maxcertificationcount < candidateData["certifications"].Count())
+                            maxcertificationcount = candidateData["certifications"].Count();
                     }
                 }
                 else
                 {
                     list = pdfInput.Handle(file);
                     output = processor.Process(list, file, resume);
+                    var candidateData = JObject.Parse(output);
                     resumeList.Add(JObject.Parse(output));
+                    if (!string.IsNullOrEmpty(candidateData["yoe"].ToString()) && maxyeo < Convert.ToDouble(candidateData["yoe"].ToString()))
+                        maxyeo = Convert.ToDouble(candidateData["yoe"].ToString());
+                    if (candidateData["skills"] != null && maxskillcounts < candidateData["skills"].Count())
+                        maxskillcounts = candidateData["skills"].Count();
+                    if (candidateData["certifications"] != null && maxcertificationcount < candidateData["certifications"].Count())
+                        maxcertificationcount = candidateData["certifications"].Count();
                 }
+            }
+
+            foreach(var resume in resumeList)
+            {
+                var yoe = 0.0;
+                var certificatecount = 0.0;
+                var skillcount = 0.0;
+                if(!string.IsNullOrEmpty(resume["yoe"].ToString()) && maxyeo > 0)
+                {
+                    yoe = Convert.ToDouble(resume["yoe"].ToString()) / maxyeo * 60;
+                }
+                if(resume["skills"] != null && maxskillcounts > 0)
+                {
+                    skillcount = Convert.ToDouble(resume["skills"].Count()) / Convert.ToDouble(maxskillcounts) * 30;
+                }
+                if(resume["certifications"] != null && maxcertificationcount > 0)
+                {
+                    certificatecount = Convert.ToDouble(resume["certifications"].Count()) / Convert.ToDouble(maxcertificationcount) * 10;
+                }
+                resume["rating"] = Math.Ceiling(yoe + skillcount + certificatecount);
             }
             return this.Ok(resumeList);
         }

@@ -4,3 +4,10 @@ D:\Tekathon 2019\ResumeRevealer\naveend915\ResumeRevealer\ResumeParser.InputRead
 D:\Tekathon 2019\ResumeRevealer\naveend915\ResumeRevealer\ResumeParser.InputReader.Pdf\bin\Debug\itextsharp.xml
 D:\Tekathon 2019\ResumeRevealer\naveend915\ResumeRevealer\ResumeParser.InputReader.Pdf\obj\Debug\ResumeParser.InputReader.Pdf.dll
 D:\Tekathon 2019\ResumeRevealer\naveend915\ResumeRevealer\ResumeParser.InputReader.Pdf\obj\Debug\ResumeParser.InputReader.Pdf.pdb
+C:\Users\vbelle\Source\Repos\naveend915\ResumeRevealer\ResumeParser.InputReader.Pdf\bin\Debug\ResumeParser.InputReader.Pdf.dll
+C:\Users\vbelle\Source\Repos\naveend915\ResumeRevealer\ResumeParser.InputReader.Pdf\bin\Debug\ResumeParser.InputReader.Pdf.pdb
+C:\Users\vbelle\Source\Repos\naveend915\ResumeRevealer\ResumeParser.InputReader.Pdf\bin\Debug\itextsharp.dll
+C:\Users\vbelle\Source\Repos\naveend915\ResumeRevealer\ResumeParser.InputReader.Pdf\bin\Debug\itextsharp.xml
+C:\Users\vbelle\Source\Repos\naveend915\ResumeRevealer\ResumeParser.InputReader.Pdf\obj\Debug\ResumeParser.InputReader.Pdf.csprojResolveAssemblyReference.cache
+C:\Users\vbelle\Source\Repos\naveend915\ResumeRevealer\ResumeParser.InputReader.Pdf\obj\Debug\ResumeParser.InputReader.Pdf.dll
+C:\Users\vbelle\Source\Repos\naveend915\ResumeRevealer\ResumeParser.InputReader.Pdf\obj\Debug\ResumeParser.InputReader.Pdf.pdb
