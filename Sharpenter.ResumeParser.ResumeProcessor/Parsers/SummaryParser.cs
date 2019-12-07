@@ -28,10 +28,10 @@ namespace ResumeParser.ResumeProcessor.Parsers
         }
         public void Parse(Section section, Resume resume)
         {
-            resume.SummaryDescription = string.Join("; ", section.Content);
-            if (string.IsNullOrWhiteSpace(resume.Designation) && resume.SummaryDescription.ToLower().Contains("working as"))
+            resume.Summarydescription = string.Join("; ", section.Content);
+            if (string.IsNullOrWhiteSpace(resume.Designation) && resume.Summarydescription.ToLower().Contains("working as"))
             {
-                resume.Designation = FindJobTitle(resume.SummaryDescription);
+                resume.Designation = FindJobTitle(resume.Summarydescription);
             }
                 ExtractYOE(ref resume, section.Content);
             ParseSkill(section, resume);
@@ -124,9 +124,9 @@ namespace ResumeParser.ResumeProcessor.Parsers
                     var YOE = summary.Substring(0, indexOf);
                     var YOEN = Regex.Match(YOE, @"\d*(\.\d*)").Value;
                     YOEN = string.IsNullOrWhiteSpace(YOEN) ? Regex.Match(YOE, @"\d+").Value : YOEN;
-                    if (string.IsNullOrWhiteSpace(resume.YearsOfExperience))
+                    if (string.IsNullOrWhiteSpace(resume.yoe))
                     {
-                        resume.YearsOfExperience = YOEN;
+                        resume.yoe = YOEN;
                     }
 
                 }

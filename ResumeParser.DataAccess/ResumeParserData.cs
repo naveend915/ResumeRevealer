@@ -31,7 +31,7 @@ namespace ResumeParser.DataAccess
             try
             {
                 SqlParameter[] sqlParameters = new SqlParameter[1];
-                sqlParameters[0] = new SqlParameter("@name", resume.FirstName);
+                sqlParameters[0] = new SqlParameter("@name", resume.Firstname);
                 return conn.executeUpdateQuery("sp_UpdateCandidate", sqlParameters);
             }
             catch (Exception e)
@@ -45,7 +45,7 @@ namespace ResumeParser.DataAccess
             try
             {
                 SqlParameter[] sqlParameters = new SqlParameter[1];
-                sqlParameters[0] = new SqlParameter("@name", resume.FirstName);
+                sqlParameters[0] = new SqlParameter("@name", resume.Firstname);
                 return conn.executeUpdateQuery("usp_InsertCandidate", sqlParameters);
             }
             catch (Exception e)

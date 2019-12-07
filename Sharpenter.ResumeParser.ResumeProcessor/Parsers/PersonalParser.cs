@@ -89,7 +89,7 @@ namespace ResumeParser.ResumeProcessor.Parsers
             var phoneMatch = PhoneRegex.Match(line);
             if (!phoneMatch.Success) return phoneFound;
 
-            resume.PhoneNumbers = phoneMatch.Value;
+            resume.Phonenumbers = phoneMatch.Value;
 
             phoneFound = true;
 
@@ -113,9 +113,9 @@ namespace ResumeParser.ResumeProcessor.Parsers
 
                 genderFound = true;
             }
-            if (!genderFound && !string.IsNullOrWhiteSpace(resume.FirstName))
+            if (!genderFound && !string.IsNullOrWhiteSpace(resume.Firstname))
             {
-                var isTrue = resume.FirstName.EndsWith("a") || resume.FirstName.EndsWith("u");
+                var isTrue = resume.Firstname.EndsWith("a") || resume.Firstname.EndsWith("u");
                 if (isTrue)
                 {
                     resume.Gender = "female";
@@ -140,7 +140,7 @@ namespace ResumeParser.ResumeProcessor.Parsers
                 var YOE = line.Substring(0, indexOf);
                 var YOEN = Regex.Match(YOE, @"\d*(\.\d*)").Value;
                 YOEN = string.IsNullOrWhiteSpace(YOEN) ? Regex.Match(YOE, @"\d+").Value : YOEN;
-                resume.YearsOfExperience = YOEN;
+                resume.yoe = YOEN;
                 YOEFound = true;
             }
 
@@ -158,14 +158,14 @@ namespace ResumeParser.ResumeProcessor.Parsers
                 var word = words[i].Trim();
                 if (!firstNameFound && _firstNameLookUp.Contains(word))
                 {
-                    resume.FirstName = word;
+                    resume.Firstname = word;
 
                     var wordlist = words.Skip(i + 1).ToList();
                     //Consider the rest of the line as part of last name
                     for(var j = 0; j < wordlist.Count(); j++)
                     {
                         var lastName = _lastNameLookUp.Where(name => name.Equals(wordlist[j].Trim(), StringComparison.InvariantCultureIgnoreCase)).FirstOrDefault();
-                        resume.LastName = string.IsNullOrWhiteSpace(resume.LastName) ? lastName : resume.LastName + lastName;
+                        resume.Lastname = string.IsNullOrWhiteSpace(resume.Lastname) ? lastName : resume.Lastname + lastName;
                     }
 
                     firstNameFound = true;
@@ -182,7 +182,7 @@ namespace ResumeParser.ResumeProcessor.Parsers
             var emailMatch = EmailRegex.Match(line);
             if (!emailMatch.Success) return emailFound;
 
-            resume.EmailAddress = emailMatch.Value;
+            resume.Emailaddress = emailMatch.Value;
 
             emailFound = true;
 

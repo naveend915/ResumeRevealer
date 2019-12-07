@@ -82,7 +82,7 @@ namespace ResumeParser.ResumeProcessor.Parsers
                 var YOE = line.Substring(0, indexOf);
                 var YOEN = Regex.Match(YOE, @"\d*(\.\d*)").Value;
                 YOEN = string.IsNullOrWhiteSpace(YOEN) ? Regex.Match(YOE, @"\d+").Value : YOEN;
-                resume.YearsOfExperience = YOEN;
+                resume.yoe = YOEN;
             }
         }
 

@@ -7,3 +7,4 @@ D:\Tekathon 2019\ResumeRevealer\naveend915\ResumeRevealer\Sharpenter.ResumeParse
 D:\Tekathon 2019\ResumeRevealer\naveend915\ResumeRevealer\Sharpenter.ResumeParser.Model\bin\Debug\ResumeParser.Model.pdb
 D:\Tekathon 2019\ResumeRevealer\naveend915\ResumeRevealer\Sharpenter.ResumeParser.Model\obj\Debug\ResumeParser.Model.dll
 D:\Tekathon 2019\ResumeRevealer\naveend915\ResumeRevealer\Sharpenter.ResumeParser.Model\obj\Debug\ResumeParser.Model.pdb
+D:\Tekathon 2019\ResumeRevealer\naveend915\ResumeRevealer\Sharpenter.ResumeParser.Model\obj\Debug\ResumeParser.Model.csprojResolveAssemblyReference.cache

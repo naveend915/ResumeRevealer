@@ -36,7 +36,7 @@ namespace ResumeParser.ResumeProcessor.Parsers
 
             if (string.IsNullOrWhiteSpace(resume.Designation))
             {
-                resume.Designation = _parserRegistry[SectionType.WorkExperience].FindJobTitle(resume.SummaryDescription);
+                resume.Designation = _parserRegistry[SectionType.WorkExperience].FindJobTitle(resume.Summarydescription);
             }
             if (string.IsNullOrWhiteSpace(resume.Designation))
             {
