@@ -164,7 +164,7 @@ namespace ResumeParser.ResumeProcessor.Parsers
                     //Consider the rest of the line as part of last name
                     for(var j = 0; j < wordlist.Count(); j++)
                     {
-                        var lastName = _lastNameLookUp.Where(name => name == wordlist[j].Trim()).FirstOrDefault();
+                        var lastName = _lastNameLookUp.Where(name => name.Equals(wordlist[j].Trim(), StringComparison.InvariantCultureIgnoreCase)).FirstOrDefault();
                         resume.LastName = string.IsNullOrWhiteSpace(resume.LastName) ? lastName : resume.LastName + lastName;
                     }
 

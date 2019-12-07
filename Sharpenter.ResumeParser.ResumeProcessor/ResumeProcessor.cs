@@ -5,6 +5,7 @@ using ResumeParser.Model.Exceptions;
 using ResumeParser.ResumeProcessor.Parsers;
 using ResumeParser.ResumeProcessor.Helpers;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace ResumeParser.ResumeProcessor
 {
@@ -59,7 +60,8 @@ namespace ResumeParser.ResumeProcessor
             IResourceLoader resourceLoader = new CachedResourceLoader(new ResourceLoader());
             var resumeBuilder = new ResumeBuilder(resourceLoader);
             var resume = resumeBuilder.Build(sections);
-
+            
+            resume.Skills = resume.Skills.Distinct().ToList();
             var formatted = _outputFormatter.Format(resume);
 
             return formatted;

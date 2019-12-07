@@ -11,9 +11,9 @@ namespace ResumeParser.ResumeProcessor
             {SectionType.Education, new List<string> {"education", "study", "school","degree","institution", "academic", "qualification"}},
             {SectionType.Courses, new List<string> {"coursework", "course"}},
             {SectionType.Summary, new List<string> {"summary","profile"}},
-            {SectionType.WorkExperience, new List<string> {"experience", "work", "employment"}},
+            {SectionType.WorkExperience, new List<string> { "work experience", "employment"}},
             {SectionType.Projects, new List<string> {"project"}},
-            {SectionType.Skills, new List<string> { "technical skills", "ability", "tool", "computer skills"}},
+            {SectionType.Skills, new List<string> { "technical skills", "ability", "tool", "computer skills","technical experience","professional summary"}},
             {SectionType.Awards, new List<string> {"award", "certification", "certificate"}}
         };
 

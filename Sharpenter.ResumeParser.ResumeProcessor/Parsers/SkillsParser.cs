@@ -64,7 +64,7 @@ namespace ResumeParser.ResumeProcessor.Parsers
                 {
                     foreach(var tech in _technologylist)
                     {
-                        if (skills.ToLower().Contains(tech.ToLower()))
+                        if (skills.Trim().ToLower().Contains(tech.ToLower()))
                         {
                             optimisedList.Add(skills);
                             break;

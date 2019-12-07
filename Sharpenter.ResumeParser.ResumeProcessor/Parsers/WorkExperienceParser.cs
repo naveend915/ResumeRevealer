@@ -86,7 +86,7 @@ namespace ResumeParser.ResumeProcessor.Parsers
             }
         }
 
-        private string FindJobTitle(string line)
+        public string FindJobTitle(string line)
         {
             var elements = SplitByWhiteSpaceRegex.Split(line);
             //if (elements.Length > 4)
