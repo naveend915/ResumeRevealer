@@ -15,7 +15,7 @@ namespace ResumeParser.DataAccess
         public DBConnection()
         {
             myAdapter = new SqlDataAdapter();
-            conn = new SqlConnection(@"Data Source=Harish-PC\SQLEXPRESS;Initial Catalog=Marbale;Trusted_Connection=True;");
+            conn = new SqlConnection(@"Data Source=10.188.73.21\sa;User ID=charter;password=twccorp@123;Initial Catalog=ResumeRevealer;");
         }
 
         /// <method>

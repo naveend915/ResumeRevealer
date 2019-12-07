@@ -26,7 +26,6 @@ namespace ResumeParser.DataAccess
             }
         }
 
-
         public int UpdateCandidate(Resume resume)
         {
             try
@@ -47,25 +46,40 @@ namespace ResumeParser.DataAccess
             {
                 SqlParameter[] sqlParameters = new SqlParameter[1];
                 sqlParameters[0] = new SqlParameter("@name", resume.FirstName);
-                return conn.executeUpdateQuery("sp_InsertCandidate", sqlParameters);
+                return conn.executeUpdateQuery("usp_InsertCandidate", sqlParameters);
             }
             catch (Exception e)
             {
                 throw e;
             }
         }
-        public int InsertUser(User user)
+        public bool InsertUser(User user)
         {
             try
             {
                 SqlParameter[] sqlParameters = new SqlParameter[6];
-                sqlParameters[0] = new SqlParameter("@name", user.Name);
-                sqlParameters[1] = new SqlParameter("@Password", user.Password);
-                sqlParameters[2] = new SqlParameter("@Role", user.Role);
-                sqlParameters[3] = new SqlParameter("@EmailId", user.EmailId);
-                sqlParameters[4] = new SqlParameter("@FilterCriteria", user.FilterCriteria);
-                sqlParameters[5] = new SqlParameter("@DefaultScreen", user.DefaultScreen);
-                return conn.executeUpdateQuery("sp_InsertUser", sqlParameters);
+                sqlParameters[0] = new SqlParameter("@name", string.IsNullOrWhiteSpace(user.Name) ? "" : user.Name);
+                sqlParameters[1] = new SqlParameter("@Password", string.IsNullOrWhiteSpace(user.Password) ? "" : user.Password);
+                sqlParameters[2] = new SqlParameter("@Role", string.IsNullOrWhiteSpace(user.Role) ? "" : user.Role);
+                sqlParameters[3] = new SqlParameter("@EmailId", string.IsNullOrWhiteSpace(user.EmailId) ? "" : user.EmailId);
+                sqlParameters[4] = new SqlParameter("@FilterCriteria", string.IsNullOrWhiteSpace(user.FilterCriteria) ? "" : user.FilterCriteria);
+                sqlParameters[5] = new SqlParameter("@DefaultScreen", string.IsNullOrWhiteSpace(user.DefaultScreen) ? "" : user.DefaultScreen);
+                conn.executeInsertQuery("usp_InsertUser", sqlParameters);
+                return true;
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+        public DataTable GetUser(string userName,string password)
+        {           
+            try
+            {
+                SqlParameter[] sqlParameters = new SqlParameter[2];
+                sqlParameters[0] = new SqlParameter("@name", userName);
+                sqlParameters[1] = new SqlParameter("@Password", password);
+                return conn.executeSelectQuery("usp_GetUser", sqlParameters);
             }
             catch (Exception e)
             {
