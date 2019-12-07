@@ -32,7 +32,8 @@ namespace ResumeParser.ResumeProcessor.Parsers
             var addressFound = false;
             var genderFound = false;
             var emailFound = false;
-            var phoneFound = false;            
+            var phoneFound = false;
+            var YOEFound = false;         
 
             foreach (var line in section.Content)
             {                
@@ -45,6 +46,8 @@ namespace ResumeParser.ResumeProcessor.Parsers
                 emailFound = ExtractEmail(resume, emailFound, line);
 
                 phoneFound = ExtractPhone(resume, phoneFound, line);
+
+                YOEFound = ExtractYOE(resume, YOEFound, line);
 
                 ExtractSocialProfiles(resume, line);
             }
@@ -108,8 +111,36 @@ namespace ResumeParser.ResumeProcessor.Parsers
 
                 genderFound = true;
             }
+            if (!genderFound && !string.IsNullOrWhiteSpace(resume.FirstName))
+            {
+                var isTrue = resume.FirstName.EndsWith("a");
+                if (isTrue)
+                {
+                    resume.Gender = "female";
+                }
+                else
+                {
+                    resume.Gender = "male";
+
+                }
+            }
 
             return genderFound;
+        }
+
+        private bool ExtractYOE(Resume resume, bool YOEFound, string line)
+        {
+            if (YOEFound) return YOEFound;
+
+            var indexOf = line.IndexOf("years of", StringComparison.InvariantCultureIgnoreCase);
+            if (indexOf > -1)
+            {
+                var YOE = line.Substring(0, indexOf);
+                var YOEN = Regex.Match(YOE, @"\d+").Value;
+                YOEFound = true;
+            }
+
+            return YOEFound;
         }
 
         private bool ExtractFirstAndLastName(Resume resume, bool firstNameFound, string line)
