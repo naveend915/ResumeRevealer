@@ -66,5 +66,12 @@ namespace ResumeRevealer.Controllers
             }
             return this.Ok(resumeList);
         }
+
+        [HttpGet]
+        [Route("GetAllCandidates")]
+        public IHttpActionResult GetAllCandidates()
+        {
+            return Ok(resumeProcessor.GetCandidates());
+        }
     }
 }

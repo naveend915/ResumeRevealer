@@ -1,5 +1,6 @@
 ﻿using ResumeParser.Model;
 using ResumeParser.ResumeProcessor;
+using System;
 using System.Net;
 using System.Net.Mail;
 using System.Web.Http;
@@ -58,13 +59,28 @@ namespace ResumeRevealer.Controllers
             return Ok(result);
         }
 
-        
-        [HttpPost]
-        [Route("SaveUserSaveUserCriteria")]
-        public IHttpActionResult SaveUserSaveUserCriteria(User user)
+        [HttpGet]
+        [Route("GetFavoriteCandidate")]
+        public IHttpActionResult GetFavoriteCandidate(string userId)
         {
-            var result = userProcessor.SaveUserSaveUserCriteria(user);
+            var result = userProcessor.GetFavoriteCandidate(Convert.ToInt32(userId));
             return Ok(result);
+        }
+
+
+        [HttpPost]
+        [Route("SaveUserCriteria")]
+        public IHttpActionResult SaveUserCriteria(User user)
+        {
+            var result = userProcessor.SaveUserCriteria(user);
+            return Ok(result);
+        }
+
+        [HttpPost]
+        [Route("SaveIsFavorite")]
+        public IHttpActionResult SaveIsFavorite(string userId, string emailId, bool isFavorite)
+        {
+            return Ok(userProcessor.SaveIsFavoriteCandidate(userId, emailId, isFavorite));
         }
     }
 }

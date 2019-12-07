@@ -38,6 +38,19 @@ namespace ResumeParser.DataAccess
             }
         }
 
+        public DataTable GetFavoriteCandidate(int userId) {
+            try
+            {
+                SqlParameter[] sqlParameters = new SqlParameter[1];
+                sqlParameters[0] = new SqlParameter("@UserId", userId);
+                return conn.executeSelectQuery("usp_GetFavoriteCandidate", sqlParameters);
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+    
         public int UpdateCandidate(Resume resume)
         {
             try
@@ -101,8 +114,25 @@ namespace ResumeParser.DataAccess
                 SqlParameter[] sqlParameters = new SqlParameter[3];
                 sqlParameters[0] = new SqlParameter("@FilterCriteria", string.IsNullOrWhiteSpace(user.FilterCriteria) ? "" : user.FilterCriteria);
                 sqlParameters[1] = new SqlParameter("@DefaultScreen", string.IsNullOrWhiteSpace(user.DefaultScreen) ? "" : user.DefaultScreen);
-                sqlParameters[3] = new SqlParameter("@UserId", user.Id);
+                sqlParameters[2] = new SqlParameter("@UserId", user.Id);
                 conn.executeInsertQuery("usp_SaveUserCriteria", sqlParameters);
+                return true;
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+
+        public bool SaveIsFavoriteCandidate(string userId, string emailId, bool isFavorite)
+        {
+            try
+            {
+                SqlParameter[] sqlParameters = new SqlParameter[3];
+                sqlParameters[0] = new SqlParameter("@IsFavourite", isFavorite);
+                sqlParameters[1] = new SqlParameter("@UserId", userId);
+                sqlParameters[2] = new SqlParameter("@EmailId", emailId);
+                conn.executeInsertQuery("usp_SaveIsFavoriteCandidate", sqlParameters);
                 return true;
             }
             catch (Exception e)

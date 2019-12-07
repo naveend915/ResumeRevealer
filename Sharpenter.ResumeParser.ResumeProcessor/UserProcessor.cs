@@ -55,7 +55,7 @@ namespace ResumeParser.ResumeProcessor
                 {
                     var interviewer = new IdTextDTO();
                     interviewer.Id = dr.IsNull("Id") ? 0 : int.Parse(dr["Id"].ToString());
-                    interviewer.Name = dr.IsNull("Name") ? "" : dr["Name"].ToString();
+                    interviewer.Text = dr.IsNull("Name") ? "" : dr["Name"].ToString();
                     listOfInteviewers.Add(interviewer);
                 }
                 return listOfInteviewers;
@@ -66,9 +66,35 @@ namespace ResumeParser.ResumeProcessor
             }
         }
 
-        public bool SaveUserSaveUserCriteria(User user)
+        public List<IdTextDTO> GetFavoriteCandidate(int userId)
+        {
+            var listOfCandidates = new List<IdTextDTO>();
+            try
+            {
+                var dataTable = userData.GetFavoriteCandidate(userId);
+                foreach (DataRow dr in dataTable.Rows)
+                {
+                    var candidate = new IdTextDTO();
+                    candidate.Id = dr.IsNull("CandidateId") ? 0 : int.Parse(dr["CandidateId"].ToString());
+                    candidate.Text = dr.IsNull("IsFavourite") ? "" : dr["IsFavourite"].ToString();
+                    listOfCandidates.Add(candidate);
+                }
+                return listOfCandidates;
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+
+        public bool SaveUserCriteria(User user)
         {
             return userData.SaveUserSaveUserCriteria(user);
+        }
+
+        public bool SaveIsFavoriteCandidate(string userId, string emailId, bool isFavorite)
+        {
+            return userData.SaveIsFavoriteCandidate(userId, emailId, isFavorite);
         }
     }
 }

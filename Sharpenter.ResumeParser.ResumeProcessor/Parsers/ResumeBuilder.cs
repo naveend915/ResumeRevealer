@@ -73,6 +73,19 @@ namespace ResumeParser.ResumeProcessor.Parsers
                     }
                 }
             }
+            if (string.IsNullOrWhiteSpace(resume.Designation))
+            {
+                var workExperienceSections = sections.Where(x => x.Type == SectionType.WorkExperience).ToList();
+                foreach (var summary in workExperienceSections)
+                {
+                    var summaryContent = string.Join("; ", summary.Content);
+                    resume.Designation = _parserRegistry[SectionType.WorkExperience].FindJobTitle(summaryContent);
+                    if (!string.IsNullOrWhiteSpace(resume.Designation))
+                    {
+                        break;
+                    }
+                }
+            }
 
             return resume;
         }

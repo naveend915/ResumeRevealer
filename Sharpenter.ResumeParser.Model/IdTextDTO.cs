@@ -8,6 +8,6 @@ namespace ResumeParser.Model
     public class IdTextDTO
     {
         public int Id { get; set; }
-        public string Name { get; set; }
+        public string Text { get; set; }
     }
 }
