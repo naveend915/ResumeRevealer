@@ -13,7 +13,7 @@ namespace ResumeParser.ResumeProcessor
             {SectionType.Summary, new List<string> {"summary","profile"}},
             {SectionType.WorkExperience, new List<string> {"experience", "work", "employment"}},
             {SectionType.Projects, new List<string> {"project"}},
-            {SectionType.Skills, new List<string> {"skill", "ability", "tool","Technical"}},
+            {SectionType.Skills, new List<string> { "technical skills", "ability", "tool", "computer skills"}},
             {SectionType.Awards, new List<string> {"award", "certification", "certificate"}}
         };
 
