@@ -89,7 +89,8 @@ namespace ResumeParser.ResumeProcessor
                 {
                     Candidate candidate = new Candidate();
                     candidate.Id = dr.IsNull("Id") ? 0 : int.Parse(dr["Id"].ToString());
-                    candidate.Name = dr.IsNull("Name") ? "" : dr["Name"].ToString();
+                    candidate.FirstName = dr.IsNull("FirstName") ? "" : dr["FirstName"].ToString();
+                    candidate.LastName = dr.IsNull("LastName") ? "" : dr["LastName"].ToString();
                     candidate.EmailId = dr.IsNull("EmailId") ? "" : dr["EmailId"].ToString();
                     candidate.Gender = dr.IsNull("Gender") ? "" : dr["Gender"].ToString();
                     candidate.Path = dr.IsNull("Path") ? "" : dr["Path"].ToString();

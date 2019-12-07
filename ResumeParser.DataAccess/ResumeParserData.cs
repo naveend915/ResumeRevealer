@@ -56,8 +56,8 @@ namespace ResumeParser.DataAccess
         {
             try
             {
-                SqlParameter[] sqlParameters = new SqlParameter[9];
-                sqlParameters[0] = new SqlParameter("@Name", resume.Firstname);
+                SqlParameter[] sqlParameters = new SqlParameter[10];
+                sqlParameters[0] = new SqlParameter("@FirstName", resume.Firstname);
                 sqlParameters[1] = new SqlParameter("@Gender", resume.Gender);
                 sqlParameters[2] = new SqlParameter("@EmailId", resume.Emailaddress);
                 sqlParameters[3] = new SqlParameter("@YearsOfExperience", string.IsNullOrWhiteSpace(resume.yoe) ? "" : resume.yoe);
@@ -66,6 +66,7 @@ namespace ResumeParser.DataAccess
                 sqlParameters[6] = new SqlParameter("@Certifications", resume.Certifications == null ? "" : string.Join(",", resume.Certifications));
                 sqlParameters[7] = new SqlParameter("@Path", string.IsNullOrWhiteSpace(path) ? "" : path);
                 sqlParameters[8] = new SqlParameter("@UserId", 1);
+                sqlParameters[9] = new SqlParameter("@LastName", resume.Lastname);
 
                 return conn.executeUpdateQuery("usp_InsertCandidate", sqlParameters);
             }
