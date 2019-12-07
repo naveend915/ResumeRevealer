@@ -5,6 +5,14 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ResumeRevealer", "ResumeRevealer\ResumeRevealer.csproj", "{7BF304AD-F6A6-4546-B091-E6281F1BE543}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ResumeParser.InputReader.Pdf", "ResumeParser.InputReader.Pdf\ResumeParser.InputReader.Pdf.csproj", "{BD909FE4-632F-460E-9843-46AAB3BCA042}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ResumeParser.ResumeProcessor", "Sharpenter.ResumeParser.ResumeProcessor\ResumeParser.ResumeProcessor.csproj", "{4E7AD443-8F56-4AA1-9476-664E35CEF55C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ResumeParser.Model", "Sharpenter.ResumeParser.Model\ResumeParser.Model.csproj", "{48D5DB4A-3C27-4B5E-8B42-4CDA14AA8386}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ResumeParser.OutputFormatter.Json", "Sharpenter.ResumeParser.OutputFormatter.Json\ResumeParser.OutputFormatter.Json.csproj", "{F640B9C6-7D04-4DA0-A620-4C8EC8A1EB57}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +23,22 @@ Global
 		{7BF304AD-F6A6-4546-B091-E6281F1BE543}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7BF304AD-F6A6-4546-B091-E6281F1BE543}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7BF304AD-F6A6-4546-B091-E6281F1BE543}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD909FE4-632F-460E-9843-46AAB3BCA042}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD909FE4-632F-460E-9843-46AAB3BCA042}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD909FE4-632F-460E-9843-46AAB3BCA042}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD909FE4-632F-460E-9843-46AAB3BCA042}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E7AD443-8F56-4AA1-9476-664E35CEF55C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E7AD443-8F56-4AA1-9476-664E35CEF55C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E7AD443-8F56-4AA1-9476-664E35CEF55C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E7AD443-8F56-4AA1-9476-664E35CEF55C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48D5DB4A-3C27-4B5E-8B42-4CDA14AA8386}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48D5DB4A-3C27-4B5E-8B42-4CDA14AA8386}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48D5DB4A-3C27-4B5E-8B42-4CDA14AA8386}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48D5DB4A-3C27-4B5E-8B42-4CDA14AA8386}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F640B9C6-7D04-4DA0-A620-4C8EC8A1EB57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F640B9C6-7D04-4DA0-A620-4C8EC8A1EB57}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F640B9C6-7D04-4DA0-A620-4C8EC8A1EB57}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F640B9C6-7D04-4DA0-A620-4C8EC8A1EB57}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

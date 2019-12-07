@@ -1,0 +1,7 @@
+C:\Users\hhn.BLR\Downloads\ResumeParser\Sharpenter.ResumeParser.ResumeProcessor\bin\Release\Sharpenter.ResumeParser.ResumeProcessor.dll
+C:\Users\hhn.BLR\Downloads\ResumeParser\Sharpenter.ResumeParser.ResumeProcessor\bin\Release\Sharpenter.ResumeParser.ResumeProcessor.pdb
+C:\Users\hhn.BLR\Downloads\ResumeParser\Sharpenter.ResumeParser.ResumeProcessor\bin\Release\Sharpenter.ResumeParser.Model.dll
+C:\Users\hhn.BLR\Downloads\ResumeParser\Sharpenter.ResumeParser.ResumeProcessor\bin\Release\Sharpenter.ResumeParser.Model.pdb
+C:\Users\hhn.BLR\Downloads\ResumeParser\Sharpenter.ResumeParser.ResumeProcessor\obj\Release\Sharpenter.ResumeParser.ResumeProcessor.csprojResolveAssemblyReference.cache
+C:\Users\hhn.BLR\Downloads\ResumeParser\Sharpenter.ResumeParser.ResumeProcessor\obj\Release\Sharpenter.ResumeParser.ResumeProcessor.dll
+C:\Users\hhn.BLR\Downloads\ResumeParser\Sharpenter.ResumeParser.ResumeProcessor\obj\Release\Sharpenter.ResumeParser.ResumeProcessor.pdb

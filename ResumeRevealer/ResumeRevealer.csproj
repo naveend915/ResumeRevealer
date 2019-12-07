@@ -145,7 +145,24 @@
       <DependentUpon>Web.config</DependentUpon>
     </Content>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\ResumeParser.InputReader.Pdf\ResumeParser.InputReader.Pdf.csproj">
+      <Project>{BD909FE4-632F-460E-9843-46AAB3BCA042}</Project>
+      <Name>ResumeParser.InputReader.Pdf</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sharpenter.ResumeParser.Model\ResumeParser.Model.csproj">
+      <Project>{48d5db4a-3c27-4b5e-8b42-4cda14aa8386}</Project>
+      <Name>ResumeParser.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sharpenter.ResumeParser.OutputFormatter.Json\ResumeParser.OutputFormatter.Json.csproj">
+      <Project>{F640B9C6-7D04-4DA0-A620-4C8EC8A1EB57}</Project>
+      <Name>ResumeParser.OutputFormatter.Json</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sharpenter.ResumeParser.ResumeProcessor\ResumeParser.ResumeProcessor.csproj">
+      <Project>{4e7ad443-8f56-4aa1-9476-664e35cef55c}</Project>
+      <Name>ResumeParser.ResumeProcessor</Name>
+    </ProjectReference>
+  </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />

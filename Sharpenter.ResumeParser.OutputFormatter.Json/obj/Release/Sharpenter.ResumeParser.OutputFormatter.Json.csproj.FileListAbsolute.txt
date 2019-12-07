@@ -1,0 +1,9 @@
+C:\Users\hhn.BLR\Downloads\ResumeParser\Sharpenter.ResumeParser.OutputFormatter.Json\bin\Release\Sharpenter.ResumeParser.OutputFormatter.Json.dll
+C:\Users\hhn.BLR\Downloads\ResumeParser\Sharpenter.ResumeParser.OutputFormatter.Json\bin\Release\Sharpenter.ResumeParser.OutputFormatter.Json.pdb
+C:\Users\hhn.BLR\Downloads\ResumeParser\Sharpenter.ResumeParser.OutputFormatter.Json\bin\Release\Newtonsoft.Json.dll
+C:\Users\hhn.BLR\Downloads\ResumeParser\Sharpenter.ResumeParser.OutputFormatter.Json\bin\Release\Sharpenter.ResumeParser.Model.dll
+C:\Users\hhn.BLR\Downloads\ResumeParser\Sharpenter.ResumeParser.OutputFormatter.Json\bin\Release\Sharpenter.ResumeParser.Model.pdb
+C:\Users\hhn.BLR\Downloads\ResumeParser\Sharpenter.ResumeParser.OutputFormatter.Json\bin\Release\Newtonsoft.Json.xml
+C:\Users\hhn.BLR\Downloads\ResumeParser\Sharpenter.ResumeParser.OutputFormatter.Json\obj\Release\Sharpenter.ResumeParser.OutputFormatter.Json.csprojResolveAssemblyReference.cache
+C:\Users\hhn.BLR\Downloads\ResumeParser\Sharpenter.ResumeParser.OutputFormatter.Json\obj\Release\Sharpenter.ResumeParser.OutputFormatter.Json.dll
+C:\Users\hhn.BLR\Downloads\ResumeParser\Sharpenter.ResumeParser.OutputFormatter.Json\obj\Release\Sharpenter.ResumeParser.OutputFormatter.Json.pdb
