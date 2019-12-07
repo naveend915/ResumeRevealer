@@ -113,7 +113,7 @@ namespace ResumeParser.ResumeProcessor.Parsers
             }
             if (!genderFound && !string.IsNullOrWhiteSpace(resume.FirstName))
             {
-                var isTrue = resume.FirstName.EndsWith("a");
+                var isTrue = resume.FirstName.EndsWith("a") || resume.FirstName.EndsWith("u");
                 if (isTrue)
                 {
                     resume.Gender = "female";
