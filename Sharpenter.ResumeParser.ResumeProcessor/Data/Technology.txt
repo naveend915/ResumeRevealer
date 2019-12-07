@@ -1,0 +1,1 @@
+c++,java,asp.net,iis,c#.net,sqlserver,sql server,linq,ajax,jquery,angular,microsoft windows xp,office,quickexpense,web api,mvc 4,windows servers,windows,vss,svn,tfs,git hub,github,visualstudio,hp fortify,javascript,html,excel,powerpoint,linux,cisco  
