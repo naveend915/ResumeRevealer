@@ -12,17 +12,31 @@ namespace ResumeRevealer.Controllers
 {
     public class HomeController : ApiController
     {
+        private ResumeProcessor resumeProcessor;
+        public HomeController()
+        {
+            resumeProcessor = new ResumeProcessor();
+        }
         [HttpGet]
         [Route("GetAllResumes")]
         public IHttpActionResult GetResumes()
         {
             var pdfInput = new PdfInputReader();
             var processor = new ResumeProcessor(new JsonOutputFormatter());
-            var files = Directory.GetFiles(@"D:\Tekathon 2019\Resumes").Select(Path.GetFullPath);
+            var files = Directory.GetFiles(@"C:\Tekathon 2019\Resumes").Select(Path.GetFullPath);
+            var candidates = resumeProcessor.GetCandidates();
             var resumeList = new List<JObject>();
             foreach (var file in files)
             {
-                var list = pdfInput.Handle(file);
+                IList<string> list = null;
+                if (candidates.Count > 0)
+                {
+                    if (candidates.Find(x => x.Path == file) == null)
+                    {
+                        list = pdfInput.Handle(file);
+                    }
+                }
+                else { list = pdfInput.Handle(file); }
                 var output = processor.Process(list);
                 resumeList.Add(JObject.Parse(output));
             }

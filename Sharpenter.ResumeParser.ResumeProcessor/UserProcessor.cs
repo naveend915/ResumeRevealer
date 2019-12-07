@@ -3,28 +3,28 @@ using ResumeParser.Model;
 using System;
 using System.Data;
 
-namespace ResumeParser.Business
+namespace ResumeParser.ResumeProcessor
 {
-    public class ResumeParserBusiness
+    public class UserProcessor
     {
-        private ResumeParserData resumeParserData;
+        private ResumeParserData userData;
 
-        public ResumeParserBusiness()
+        public UserProcessor()
         {
-            resumeParserData = new ResumeParserData();
+            userData = new ResumeParserData();
         }
 
         public bool InsertUser(User user)
         {
-            return resumeParserData.InsertUser(user);
+            return userData.InsertUser(user);
         }
-        
-        public User GetValidUser(string userName,string password)
+
+        public User GetValidUser(string userName, string password)
         {
             User user = null;
             try
             {
-                var dataTable = resumeParserData.GetUser(userName, password);
+                var dataTable = userData.GetUser(userName, password);
                 foreach (DataRow dr in dataTable.Rows)
                 {
                     user = new User();
@@ -42,5 +42,7 @@ namespace ResumeParser.Business
                 throw e;
             }
         }
+
+       
     }
 }
