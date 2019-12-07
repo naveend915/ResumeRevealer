@@ -1,12 +1,3 @@
-C:\Users\vbelle\Source\Repos\naveend915\ResumeRevealer\ResumeParser.Business\bin\Debug\ResumeParser.Business.dll
-C:\Users\vbelle\Source\Repos\naveend915\ResumeRevealer\ResumeParser.Business\bin\Debug\ResumeParser.Business.pdb
-C:\Users\vbelle\Source\Repos\naveend915\ResumeRevealer\ResumeParser.Business\bin\Debug\ResumeParser.DataAccess.dll
-C:\Users\vbelle\Source\Repos\naveend915\ResumeRevealer\ResumeParser.Business\bin\Debug\ResumeParser.Model.dll
-C:\Users\vbelle\Source\Repos\naveend915\ResumeRevealer\ResumeParser.Business\bin\Debug\ResumeParser.DataAccess.pdb
-C:\Users\vbelle\Source\Repos\naveend915\ResumeRevealer\ResumeParser.Business\bin\Debug\ResumeParser.Model.pdb
-C:\Users\vbelle\Source\Repos\naveend915\ResumeRevealer\ResumeParser.Business\obj\Debug\ResumeParser.Business.csprojResolveAssemblyReference.cache
-C:\Users\vbelle\Source\Repos\naveend915\ResumeRevealer\ResumeParser.Business\obj\Debug\ResumeParser.Business.dll
-C:\Users\vbelle\Source\Repos\naveend915\ResumeRevealer\ResumeParser.Business\obj\Debug\ResumeParser.Business.pdb
 D:\Tekathon 2019\ResumeRevealer\naveend915\ResumeRevealer\ResumeParser.Business\bin\Debug\ResumeParser.Business.dll
 D:\Tekathon 2019\ResumeRevealer\naveend915\ResumeRevealer\ResumeParser.Business\bin\Debug\ResumeParser.Business.pdb
 D:\Tekathon 2019\ResumeRevealer\naveend915\ResumeRevealer\ResumeParser.Business\bin\Debug\ResumeParser.DataAccess.dll
@@ -16,3 +7,12 @@ D:\Tekathon 2019\ResumeRevealer\naveend915\ResumeRevealer\ResumeParser.Business\
 D:\Tekathon 2019\ResumeRevealer\naveend915\ResumeRevealer\ResumeParser.Business\obj\Debug\ResumeParser.Business.csprojResolveAssemblyReference.cache
 D:\Tekathon 2019\ResumeRevealer\naveend915\ResumeRevealer\ResumeParser.Business\obj\Debug\ResumeParser.Business.dll
 D:\Tekathon 2019\ResumeRevealer\naveend915\ResumeRevealer\ResumeParser.Business\obj\Debug\ResumeParser.Business.pdb
+C:\Users\vbelle\Source\Repos\naveend915\ResumeRevealer\ResumeParser.Business\bin\Debug\ResumeParser.Business.dll
+C:\Users\vbelle\Source\Repos\naveend915\ResumeRevealer\ResumeParser.Business\bin\Debug\ResumeParser.Business.pdb
+C:\Users\vbelle\Source\Repos\naveend915\ResumeRevealer\ResumeParser.Business\bin\Debug\ResumeParser.DataAccess.dll
+C:\Users\vbelle\Source\Repos\naveend915\ResumeRevealer\ResumeParser.Business\bin\Debug\ResumeParser.Model.dll
+C:\Users\vbelle\Source\Repos\naveend915\ResumeRevealer\ResumeParser.Business\bin\Debug\ResumeParser.DataAccess.pdb
+C:\Users\vbelle\Source\Repos\naveend915\ResumeRevealer\ResumeParser.Business\bin\Debug\ResumeParser.Model.pdb
+C:\Users\vbelle\Source\Repos\naveend915\ResumeRevealer\ResumeParser.Business\obj\Debug\ResumeParser.Business.csprojResolveAssemblyReference.cache
+C:\Users\vbelle\Source\Repos\naveend915\ResumeRevealer\ResumeParser.Business\obj\Debug\ResumeParser.Business.dll
+C:\Users\vbelle\Source\Repos\naveend915\ResumeRevealer\ResumeParser.Business\obj\Debug\ResumeParser.Business.pdb
