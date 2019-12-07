@@ -54,7 +54,7 @@ namespace ResumeRevealer.Controllers
         [Route("GetInterviewers")]
         public IHttpActionResult GetInterviewers()
         {
-            var result = resumeParserBusiness.GetInterviewers();
+            var result = userProcessor.GetInterviewers();
             return Ok(result);
         }
 
@@ -63,7 +63,7 @@ namespace ResumeRevealer.Controllers
         [Route("SaveUserSaveUserCriteria")]
         public IHttpActionResult SaveUserSaveUserCriteria(User user)
         {
-            var result = resumeParserBusiness.SaveUserSaveUserCriteria(user);
+            var result = userProcessor.SaveUserSaveUserCriteria(user);
             return Ok(result);
         }
     }

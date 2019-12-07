@@ -1,7 +1,9 @@
 ﻿using ResumeParser.DataAccess;
 using ResumeParser.Model;
 using System;
+using System.Collections.Generic;
 using System.Data;
+using System.Data.SqlClient;
 
 namespace ResumeParser.ResumeProcessor
 {
@@ -43,6 +45,30 @@ namespace ResumeParser.ResumeProcessor
             }
         }
 
-       
+        public List<IdTextDTO> GetInterviewers()
+        {
+            var listOfInteviewers = new List<IdTextDTO>();
+            try
+            {
+                var dataTable = userData.GetInterviewers();
+                foreach (DataRow dr in dataTable.Rows)
+                {
+                    var interviewer = new IdTextDTO();
+                    interviewer.Id = dr.IsNull("Id") ? 0 : int.Parse(dr["Id"].ToString());
+                    interviewer.Name = dr.IsNull("Name") ? "" : dr["Name"].ToString();
+                    listOfInteviewers.Add(interviewer);
+                }
+                return listOfInteviewers;
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+
+        public bool SaveUserSaveUserCriteria(User user)
+        {
+            return userData.SaveUserSaveUserCriteria(user);
+        }
     }
 }
