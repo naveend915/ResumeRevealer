@@ -15,7 +15,7 @@ namespace ResumeParser.Model
         public string Certifications { get; set; }
         public string Path { get; set; }
         public string Status { get; set; }
-        public DateTime	ScheduleDateTime { get; set; }
+        public DateTime? ScheduleDateTime { get; set; }
         public string L1Comments { get; set; }
         public int L1UserId { get; set; }
         public string L2Comments { get; set; }

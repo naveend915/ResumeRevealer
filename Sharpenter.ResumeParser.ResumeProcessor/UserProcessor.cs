@@ -56,6 +56,7 @@ namespace ResumeParser.ResumeProcessor
                     var interviewer = new User();
                     interviewer.Id = dr.IsNull("Id") ? 0 : int.Parse(dr["Id"].ToString());
                     interviewer.Name = dr.IsNull("Name") ? "" : dr["Name"].ToString();
+                    interviewer.Role = dr.IsNull("Role") ? "" : dr["Role"].ToString();
                     interviewer.EmailId = dr.IsNull("EmailId") ? "" : dr["EmailId"].ToString();
                     listOfInteviewers.Add(interviewer);
                 }
