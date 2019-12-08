@@ -24,6 +24,7 @@ namespace ResumeParser.Model
         public DateTime	LastUpdatedDate { get; set; }
         public int LastUpdatedBy { get; set; }
         public bool Isfavorite { get; set; }
+        public double Rating { get; set; }
 
     }
 }

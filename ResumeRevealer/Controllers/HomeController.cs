@@ -118,7 +118,32 @@ namespace ResumeRevealer.Controllers
         [Route("GetAllCandidates")]
         public IHttpActionResult GetAllCandidates(string userId)
         {
-            return Ok(resumeProcessor.GetCandidates(Convert.ToInt32(userId)));
+            var maxyeo = 0.0;
+            var maxskillcounts = 0;
+            var candidates = resumeProcessor.GetCandidates(Convert.ToInt32(userId));
+            foreach (var candidate in candidates)
+            {
+                if (!string.IsNullOrEmpty(candidate.YearsOfExperience) && maxyeo < Convert.ToDouble(candidate.YearsOfExperience))
+                    maxyeo = Convert.ToDouble(candidate.YearsOfExperience);
+                if (candidate.Skills != null && maxskillcounts < candidate.Skills.Split(',').Count())
+                    maxskillcounts = candidate.Skills.Split(',').Count();
+            }
+                foreach (var candidate in candidates)
+            {
+                var yoe = 0.0;
+                var skillcount = 0.0;
+                if (!string.IsNullOrEmpty(candidate.YearsOfExperience) && maxyeo > 0)
+                {
+                    yoe = Convert.ToDouble(candidate.YearsOfExperience) / maxyeo * 60;
+                }
+                if (candidate.Skills != null && maxskillcounts > 0)
+                {
+                    skillcount = Convert.ToDouble(candidate.Skills.Split(',').Count()) / Convert.ToDouble(maxskillcounts) * 40;
+                }
+               
+                candidate.Rating = Math.Ceiling(yoe + skillcount);
+            }
+            return Ok(candidates);
         }
 
         [HttpPost]
