@@ -42,7 +42,7 @@ namespace ResumeRevealer.Controllers
             client.EnableSsl = true;
             client.Credentials = new NetworkCredential("vbelle@teksystems.com", "W0rking@firebase");
             MailMessage mailMessage = new MailMessage();
-            mailMessage.From = new MailAddress(email.FromPerson);
+            mailMessage.From = new MailAddress("vbelle@teksystems.com");
             mailMessage.To.Add(email.ToPerson);
             mailMessage.Subject = email.subject;
             mailMessage.Body = email.body;

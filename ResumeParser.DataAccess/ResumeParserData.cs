@@ -60,11 +60,11 @@ namespace ResumeParser.DataAccess
                 SqlParameter[] sqlParameters = new SqlParameter[8];
                 sqlParameters[0] = new SqlParameter("@Path", candidate.Path);
                 sqlParameters[1] = new SqlParameter("@Status", candidate.Status);
-                sqlParameters[2] = new SqlParameter("@ScheduleDateTime", candidate.ScheduleDateTime == new DateTime() ? DateTime.MinValue : candidate.ScheduleDateTime);
+                sqlParameters[2] = new SqlParameter("@ScheduleDateTime", candidate.ScheduleDateTime == new DateTime() ? null : candidate.ScheduleDateTime);
                 sqlParameters[3] = new SqlParameter("@L1Comments", string.IsNullOrEmpty(candidate.L1Comments) ? "" : candidate.L1Comments);
-                sqlParameters[4] = new SqlParameter("@L1UserId", candidate.L1UserId == 0 ? 1 : candidate.L1UserId);
+                sqlParameters[4] = new SqlParameter("@L1UserId", candidate.L1UserId);
                 sqlParameters[5] = new SqlParameter("@L2Comments", string.IsNullOrEmpty(candidate.L2Comments) ? "" : candidate.L2Comments);
-                sqlParameters[6] = new SqlParameter("@L2UserId", candidate.L2UserId == 0 ? 1 : candidate.L2UserId);
+                sqlParameters[6] = new SqlParameter("@L2UserId", candidate.L2UserId);
                 sqlParameters[7] = new SqlParameter("@LastUpdatedBy", 1);
 
                 return conn.executeUpdateQuery("usp_UpdateCandidateStatus", sqlParameters);
